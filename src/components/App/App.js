@@ -1,8 +1,19 @@
+import {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import axios from 'axios';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import MovieList from '../MovieList/MovieList'
+import MovieDetails from '../MovieDetails/MovieDetails'
+
 
 function App() {
+ 
+ 
+ 
+ 
+ 
+ 
   return (
     <div className="App">
       <h1>The Movies Saga!</h1>
@@ -10,8 +21,9 @@ function App() {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        
-        {/* Details page */}
+          <Route path="/details">
+            <MovieDetails/>
+          </Route>
 
         {/* Add Movie page */}
       </Router>

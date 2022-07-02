@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './MovieList.css'
 
-function MovieList() {
+
+function MovieDetails() {
 
     const dispatch = useDispatch();
-    const movies = useSelector(store => store.movies);
+    const details = useSelector(store => store.details);
 
     useEffect(() => {
-        dispatch({ type: 'FETCH_MOVIES' });
+        dispatch({ type: 'DETAILS_MOVIES' });
     }, []);
 
     
     return (
         <main>
-            <h1>MovieList</h1>
-            <section className="movies">
+            <h1>MovieList2</h1>
+            {/* <section className="movies">
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
@@ -24,10 +24,10 @@ function MovieList() {
                         </div>
                     );
                 })}
-            </section>
+            </section> */}
         </main>
 
     );
 }
 
-export default MovieList;
+export default MovieDetails;
