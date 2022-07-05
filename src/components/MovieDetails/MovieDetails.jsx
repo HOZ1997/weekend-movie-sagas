@@ -12,7 +12,7 @@ function MovieDetails() {
     return (
          <main>
             <h1>MovieDetails</h1>
-            <h3> Details: {JSON.stringify (details)}</h3>
+            {/* <h3> Details: {JSON.stringify (details)}</h3> */}
             <ul>
                 {details.map(details => (
                         <li key={details.id} >

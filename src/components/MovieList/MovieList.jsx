@@ -15,9 +15,13 @@ function MovieList() {
         console.log('Image clicked');
         history.push ('/details')
         }
-
+        
+       const getMovies =()=>{ 
+           dispatch({ type: 'FETCH_MOVIES' });
+    }
+    
     useEffect(() => {
-        dispatch({ type: 'FETCH_MOVIES' });
+        getMovies();
     }, []);
  
     return(
