@@ -1,31 +1,31 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
+//import React, { useEffect } from 'react';
+import React from 'react';
+import {useSelector } from 'react-redux';
+//import axios from 'axios';
 
 function MovieDetails() {
 
-    const dispatch = useDispatch();
-    const details = useSelector(store => store.details);
-
-    useEffect(() => {
-        dispatch({ type: 'DETAILS_MOVIES' });
-    }, []);
-
+    
+    const details = useSelector (store =>store.details);
+  
     
     return (
-        <main>
-            <h1>MovieList2</h1>
-            {/* <section className="movies">
-                {movies.map(movie => {
-                    return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
-                        </div>
-                    );
-                })}
-            </section> */}
+         <main>
+            <h1>MovieDetails</h1>
+            <h3> Details: {JSON.stringify (details)}</h3>
+            <ul>
+                {details.map(details => (
+                        <li key={details.id} >
+                           <h3>{details.title}</h3>
+                           <p>{details.poster}</p>
+                           <p>{details.description}</p>
+                         </li>   
+                ))}
+                </ul>
+          
         </main>
+  
+     
 
     );
 }
